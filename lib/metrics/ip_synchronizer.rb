@@ -2,6 +2,11 @@ require "aws-sdk-s3"
 
 module Metrics
   class IPSynchronizer
+
+    def self.execute
+      new.execute
+    end
+
     def execute
       truncate_ip_locations
       save data
